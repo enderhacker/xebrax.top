@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Theme Made By Dark❶ -->
+	<title>Dark❶</title>
+	<!--
+		@copyright (c) 2019, Dark❶ [dark1 / dark1z]
+		@license CopyRight (C) 2019 - ForEver by Dark❶ [dark1 / dark1z]
+	-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="./assets/favicon.png" type="image/png">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<style>
+	body {
+			font: 400 15px Lato, sans-serif;
+			line-height: 1.8;
+			color: #ccc;
+			background-color: #333;
+	}
+	h2 {
+			font-size: 24px;
+			text-transform: uppercase;
+			color: #C0C0C0;
+			font-weight: 600;
+			margin-bottom: 30px;
+	}
+	h3 {
+			font-size: 22px;
+			line-height: 1.375em;
+			color: #C0C0C0;
+			font-weight: 500;
+			margin-bottom: 30px;
+	}
+	h4 {
+			font-size: 19px;
+			line-height: 1.375em;
+			color: #C0C0C0;
+			font-weight: 400;
+			margin-bottom: 30px;
+	}
+	hr {
+			border-color: #000000;
+			border-width: 2px;
+	}
+	.container-fluid {
+			padding: 60px 50px;
+	}
+	.header {
+			background-color: #000000;
+			color: #333;
+			padding: 25px;
+			font-family: Montserrat, sans-serif;
+			height: 500px;
+	}
+	.bg-grey {
+			background-color: #222222;
+	}
+	.logo-tiny {
+			color: #000000;
+			font-size: 25px;
+	}
+	.logo-small {
+			color: #000000;
+			font-size: 50px;
+	}
+	.logo {
+			color: #000000;
+			font-size: 200px;
+	}
+	.thumbnail {
+			padding: 0 0 15px 0;
+			border: none;
+			border-radius: 0;
+	}
+	.thumbnail img {
+			width: 100%;
+			height: 100%;
+			margin-bottom: 10px;
+	}
+	.item h4 {
+			font-size: 19px;
+			line-height: 1.375em;
+			font-weight: 400;
+			font-style: italic;
+			margin: 70px 0;
+	}
+	.item span {
+			font-style: normal;
+	}
+	.panel {
+			border: 1px solid #000000;
+			background-color: #333 !important;
+			border-radius:0 !important;
+			transition: box-shadow 0.5s;
+	}
+	.panel:hover {
+			box-shadow: 5px 0px 40px rgba(255, 255, 255, 0.2);
+	}
+	.panel-footer .btn:hover {
+			border: 1px solid #000000;
+			background-color: #333 !important;
+			color: #000000;
+	}
+	.panel-heading {
+			color: #ccc !important;
+			background-color: #000000 !important;
+			border-color: #222 !important;
+			padding: 25px;
+			border-bottom: 1px solid transparent;
+			border-top-left-radius: 0px;
+			border-top-right-radius: 0px;
+			border-bottom-left-radius: 0px;
+			border-bottom-right-radius: 0px;
+	}
+	.panel-footer {
+			background-color: #333 !important;
+			border-color: #222 !important;
+	}
+	.panel-footer h3 {
+			font-size: 32px;
+	}
+	.panel-footer h4 {
+			color: #aaa;
+			font-size: 14px;
+	}
+	.panel-footer .btn {
+			margin: 15px 0;
+			background-color: #000000;
+			color: #ccc;
+	}
+	.navbar {
+			margin-bottom: 0;
+			background-color: #000000;
+			z-index: 9999;
+			border: 0;
+			font-size: 12px !important;
+			line-height: 1.42857143 !important;
+			letter-spacing: 4px;
+			border-radius: 0;
+			font-family: Montserrat, sans-serif;
+			opacity: 0.9;
+	}
+	.navbar .container-fluid {
+			padding: 0px 10%;
+	}
+	.navbar li a, .navbar .navbar-brand {
+			color: #ccc !important;
+	}
+	.navbar-nav li a:hover, .navbar-nav li.active a {
+			color: #ccc !important;
+			background-color: #333 !important;
+	}
+	.navbar-header .navbar-toggle {
+		background-color: #ffffff40 !important;
+		border-color: #ffffff20 !important;
+	}
+	.navbar-header .navbar-toggle:hover	{
+		background-color: #ffffff40 !important;
+		border-color: #ffffff20 !important;
+	}
+	.navbar-header .navbar-toggle .icon-bar {
+		background-color: #ffffffC0 !important;
+	}
+	.navbar-header a:hover {
+			color: #ccc !important;
+			background-color: #333 !important;
+	}
+	footer .glyphicon {
+			font-size: 20px;
+			margin-bottom: 20px;
+			color: #000000;
+	}
+	.slideanim {visibility:hidden;}
+	.slide {
+			animation-name: slide;
+			-webkit-animation-name: slide;
+			animation-duration: 1s;
+			-webkit-animation-duration: 1s;
+			visibility: visible;
+	}
+	.affix {
+		top:0;
+		width: 100%;
+		z-index: 9999 !important;
+	}
+	.affix ~ .container-fluid {
+	 position: relative;
+	 top: 50px;
+	}
+	@keyframes slide {
+		0% {
+			opacity: 0;
+			transform: translateY(70%);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0%);
+		}
+	}
+	@-webkit-keyframes slide {
+		0% {
+			opacity: 0;
+			-webkit-transform: translateY(70%);
+		}
+		100% {
+			opacity: 1;
+			-webkit-transform: translateY(0%);
+		}
+	}
+	@media screen and (max-width: 768px) {
+		.col-sm-4 {
+			text-align: center;
+			margin: 25px 0;
+		}
+		.btn-lg {
+				width: 100%;
+				margin-bottom: 35px;
+		}
+	}
+	@media screen and (max-width: 480px) {
+		.logo {
+				font-size: 150px;
+		}
+	}
+	</style>
+</head>
+<body id="bodyTop" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<div class="container-fluid text-center header">
+	<h1 style="color: #777;">Dark❶</h1>
+	<img src="./assets/profile.png" class="img-responsive img-circle" style="display:inline" alt="Dark❶ Profile" width="360" height="360">
+</div>
+
+<nav class="navbar navbar-default" data-spy="affix" data-offset-top="500">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="./"><img src="./assets/favicon.png" class="img-responsive img-circle" style="display:inline" alt="Dark❶ Favicon" width="30" height="30"> Dark❶</a>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#about">ABOUT</a></li>
+				<li><a href="#framework">FRAMEWORK</a></li>
+				<li><a href="#projects">PROJECTS</a></li>
+				<li><a href="#contact">CONTACT</a></li>
+				<li><a href="#donations">DONATIONS</a></li>
+				<li><a href="https://github.dark1.rf.gd" target="_blank">GITHUB</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+	<div class="row text-center">
+		<div class="col-sm-4 hidden-xs">
+			<span class="glyphicon glyphicon-globe logo"></span>
+		</div>
+		<div class="col-sm-4 col-xs-12">
+			<h2>About Dark❶</h2><br>
+			<p>Web Developer &amp; contributing to phpBB &amp; their Extension Development.</p>
+		</div>
+		<div class="col-sm-4 hidden-xs">
+			<span class="glyphicon glyphicon-user logo"></span>
+		</div>
+	</div>
+</div>
+
+<!-- Container (Framework Section) -->
+<div id="framework" class="container-fluid text-center bg-grey">
+	<h2>Framework</h2>
+	<br>
+	<div class="row slideanim">
+		<div class="col-sm-4">
+			<span class="glyphicon glyphicon-stop logo-small"></span>
+			<h4>HTML</h4>
+		</div>
+		<div class="col-sm-4">
+			<span class="glyphicon glyphicon-th-large logo-small"></span>
+			<h4>CSS</h4>
+		</div>
+		<div class="col-sm-4">
+			<span class="glyphicon glyphicon-th logo-small"></span>
+			<h4>JavaScript</h4>
+		</div>
+	</div>
+	<br>
+	<div class="row slideanim">
+		<div class="col-sm-4">
+			<span class="glyphicon glyphicon-leaf logo-small"></span>
+			<h4>Bootstrap</h4>
+		</div>
+		<div class="col-sm-4">
+			<span class="glyphicon glyphicon-grain logo-small"></span>
+			<h4>jQuery</h4>
+		</div>
+		<div class="col-sm-4">
+			<span class="glyphicon glyphicon-tree-deciduous logo-small"></span>
+			<h4>Node.js</h4>
+		</div>
+	</div>
+	<br>
+	<div class="row slideanim">
+		<div class="col-sm-4">
+			<span class="glyphicon glyphicon-fire logo-small"></span>
+			<h4>PHP</h4>
+		</div>
+		<div class="col-sm-4">
+			<span class="glyphicon glyphicon-flash logo-small"></span>
+			<h4>phpBB</h4>
+		</div>
+		<div class="col-sm-4">
+			<span class="glyphicon glyphicon-tint logo-small"></span>
+			<h4>SQL</h4>
+		</div>
+	</div>
+</div>
+
+<!-- Container (Projects Section) -->
+<div id="projects" class="container-fluid">
+	<div class="text-center">
+		<h2>Projects</h2>
+	</div>
+	<div class="row slideanim">
+		<div class="col-sm-4 col-xs-12">
+			<div class="panel panel-default text-center">
+				<div class="panel-heading">
+					<h1>Member Avatar & Status [MAS]</h1>
+				</div>
+				<div class="panel-body">
+					<h4>OpenSource Development</h4>
+					<p class="text-left">
+							GitHub Repository: <a href="https://github.com/dark1z/memberavatarstatus" target="_blank">memberavatarstatus</a><br>
+							phpBB Customization Database: <a href="https://www.phpbb.com/customise/db/extension/member_avatar_status" target="_blank">Member Avatar & Status</a><br>
+							For more Details Go Here : <a href="https://github.dark1.rf.gd/memberavatarstatus" target="_blank">Member Avatar & Status [MAS]</a>
+					</p>
+					<br>
+					<div class="row">
+						<div class="col-sm-4">
+							<span class="glyphicon glyphicon-fire logo-tiny"></span>
+							<h5>PHP 5.4.7+</h5>
+						</div>
+						<div class="col-sm-4">
+							<span class="glyphicon glyphicon-flash logo-tiny"></span>
+							<h5>phpBB 3.2.10+</h5>
+						</div>
+						<div class="col-sm-4">
+							<span class="glyphicon glyphicon-tint logo-tiny"></span>
+							<h5>SQL [Most]</h5>
+						</div>
+					</div>
+				</div>
+				<div class="panel-footer">
+					<h3>Demo ScreenShots</h3>
+					<h5>Member Avatar & Status [MAS] v3.1.0 on phpBB v3.3.0</h5>
+					<a class="btn btn-lg" href="https://github.dark1.rf.gd/memberavatarstatus" target="_blank">Check Now</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4 col-xs-12">
+			<div class="panel panel-default text-center">
+				<div class="panel-heading">
+					<h1>Reduce Search Index [RSI]</h1>
+				</div>
+				<div class="panel-body">
+					<h4>OpenSource Development</h4>
+					<p class="text-left">
+							GitHub Repository: <a href="https://github.com/dark1z/reducesearchindex" target="_blank">reducesearchindex</a><br>
+							phpBB Customization Database: <a href="https://www.phpbb.com/customise/db/extension/reduce_search_index" target="_blank">Reduce Search Index</a><br>
+							For more Details Go Here : <a href="https://github.dark1.rf.gd/reducesearchindex" target="_blank">Reduce Search Index [RSI]</a>
+					</p>
+					<br>
+					<div class="row">
+						<div class="col-sm-4">
+							<span class="glyphicon glyphicon-fire logo-tiny"></span>
+							<h5>PHP 5.4.7+</h5>
+						</div>
+						<div class="col-sm-4">
+							<span class="glyphicon glyphicon-flash logo-tiny"></span>
+							<h5>phpBB 3.2.9+</h5>
+						</div>
+						<div class="col-sm-4">
+							<span class="glyphicon glyphicon-tint logo-tiny"></span>
+							<h5>SQL [Most]</h5>
+						</div>
+					</div>
+				</div>
+				<div class="panel-footer">
+					<h3>Demo ScreenShots</h3>
+					<h5>Reduce Search Index [RSI] v1.0.0</h5>
+					<a class="btn btn-lg" href="https://github.dark1.rf.gd/reducesearchindex" target="_blank">Check Now</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4 col-xs-12">
+			<div class="panel panel-default text-center">
+				<div class="panel-heading">
+					<h1>User Notification Control [UNC]</h1>
+				</div>
+				<div class="panel-body">
+					<h4>OpenSource Development</h4>
+					<p class="text-left">
+							GitHub Repository: <a href="https://github.com/dark1z/usernotificationcontrol" target="_blank">usernotificationcontrol</a><br>
+							phpBB Customization Database: <a href="https://www.phpbb.com/customise/db/extension/user_notification_control" target="_blank">User Notification Control</a><br>
+							For more Details Go Here : <a href="https://github.dark1.rf.gd/usernotificationcontrol" target="_blank">User Notification Control [UNC]</a>
+					</p>
+					<br>
+					<div class="row">
+						<div class="col-sm-4">
+							<span class="glyphicon glyphicon-fire logo-tiny"></span>
+							<h5>PHP 5.4.7+</h5>
+						</div>
+						<div class="col-sm-4">
+							<span class="glyphicon glyphicon-flash logo-tiny"></span>
+							<h5>phpBB 3.2.10+</h5>
+						</div>
+						<div class="col-sm-4">
+							<span class="glyphicon glyphicon-tint logo-tiny"></span>
+							<h5>SQL [Most]</h5>
+						</div>
+					</div>
+				</div>
+				<div class="panel-footer">
+					<h3>Demo ScreenShots</h3>
+					<h5>User Notification Control [UNC] v1.0.0</h5>
+					<a class="btn btn-lg" href="https://github.dark1.rf.gd/usernotificationcontrol" target="_blank">Check Now</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid text-center bg-grey">
+	<h2>Contact</h2>
+	<br>
+	<div class="row slideanim">
+		<div class="col-sm-4 col-xs-12">
+			<span class="glyphicon glyphicon-envelope logo"></span>
+		</div>
+		<div class="col-sm-8 col-xs-12">
+			<h1>E-Mail :</h1>
+			<h1 style="font-size: 4vmin;"><a href="mailto:dark1z@yahoo.com" target="_blank"><code>dark1z[AT]yahoo[DOT]com</code></a></h1>
+			<h5>(Right Click & Copy the E-Mail Address)</h5>
+		</div>
+	</div>
+</div>
+
+<!-- Container (Donations Section) -->
+<div id="donations" class="container-fluid">
+	<div class="text-center">
+		<h2>Donations</h2>
+	</div>
+	<div class="row slideanim">
+		<div class="col-sm-4 hidden-xs"></div>
+		<div class="col-sm-4 col-xs-12">
+			<div class="panel panel-default text-center">
+				<div class="panel-heading">
+					<h1>PayPal Donation</h1>
+				</div>
+				<div class="panel-body">
+					<h4>Donations via PayPal</h4>
+					<p>If you like any of my work,<br>and would like to appreciate/motivate it,<br>then kindly donate as you wish.</p>
+					<br>
+					<div class="row">
+						<div class="col-sm-4">
+							<span class="glyphicon glyphicon-piggy-bank logo-tiny"></span>
+							<h5>Donate as you Wish</h5>
+						</div>
+						<div class="col-sm-4">
+							<span class="glyphicon glyphicon-thumbs-up logo-tiny"></span>
+							<h5>Thank You Very Much</h5>
+						</div>
+						<div class="col-sm-4">
+							<span class="glyphicon glyphicon-heart logo-tiny"></span>
+							<h5>My Love for You</h5>
+						</div>
+					</div>
+				</div>
+				<div class="panel-footer">
+					<h3>PayPal Donation Page</h3>
+					<h5>Donate as you like</h5>
+					<a class="btn btn-lg" href="mailto:dark1z@yahoo.com" target="_blank">Donate Now</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4 hidden-xs"></div>
+	</div>
+	<div class="text-center">
+		<h3>Thank you for your Kind Donation</h3>
+	</div>
+</div>
+
+<!-- Container (Footer) -->
+<footer class="container-fluid text-center bg-grey">
+	<a href="#bodyTop" title="To Top">
+		<span class="glyphicon glyphicon-chevron-up"></span>
+	</a>
+	<p>
+	All Content © 2023, "<a href="./">Dark❶</a>"<br>
+	All Rights Reserved by <a href="./">Dark❶</a><br>
+	Powered by "<a href="https://getbootstrap.com">Bootstrap</a>" &amp; "<a href="https://www.php.net">PHP</a>"<br>
+	Hosting sponsored by "<a href="https://infinityfree.net">InfinityFree</a>"<br>
+	Theme Made By "<a href="./">Dark❶</a>"<br>
+	Theme © 2023, "<a href="./">Dark❶</a>"
+	</p>
+</footer>
+
+<script>
+$(document).ready(function(){
+	// Add smooth scrolling to all links in navbar + footer link
+	$(".navbar a, footer a[href=\'#bodyTop\']").on("click", function(event) {
+
+		// Store hash
+		var hash = this.hash;
+		if(hash!="")
+		{
+			// Prevent default anchor click behavior
+			event.preventDefault();
+
+			// Using jQuery\'s animate() method to add smooth page scroll
+			// The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+			$("html, body").animate({
+				scrollTop: $(hash).offset().top
+			}, 900, function(){
+
+				// Add hash (#) to URL when done scrolling (default click behavior)
+				window.location.hash = hash;
+			});
+		}
+
+	});
+
+	// Slide in elements on scroll
+	$(window).scroll(function() {
+		$(".slideanim").each(function(){
+			var pos = $(this).offset().top;
+
+			var winTop = $(window).scrollTop();
+				if (pos < winTop + 600) {
+					$(this).addClass("slide");
+				}
+		});
+	});
+})
+</script>
+
+</body>
+</html>
